@@ -11,6 +11,15 @@ package co.poli.edu.electrodomesticos;
 public class ElectrodomesticosMain {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Electrodomestico[] electrodomesticos = new Electrodomestico[3];
+        electrodomesticos[0] = new Lavadora();
+        electrodomesticos[1] = new Lavadora(150,50);
+        electrodomesticos[2] = new Televisor(135, 10);
+        
+        for(Electrodomestico e : electrodomesticos){
+            System.out.println("Electrodomestico; "+e.getPrecioBase()+
+                   e.getPeso()+e.getConsumoEnergetico()+e.getColor()+"Electrodomestico: "+e.getPrecioBase()
+                    +e.getPeso()+e.getConsumoEnergetico()+e.getColor());
+        }
     }
 }
